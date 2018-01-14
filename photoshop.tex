@@ -5,29 +5,62 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{ctexcap}
+\usepackage{fancyhdr}
+%页眉面脚 参见《latex2e完全学习手册》4.4版式 页眉与页脚
+\pagestyle{fancy}
+\fancyhead[EL,OL,ER,OR]{}
+\fancyhead[EC]{西安电子科技大学}
+\fancyhead[OC]{\leftmark}
+\fancyfoot[C]{\thepage}
 
-\title{Photoshop学习笔记}
+\title{\Huge\color{green}\songti Photoshop学习笔记}
 \author{王永刚}
 \date{\today}
 
-\setCJKmainfont{KaiTi}
+%文档
+%CTEX小手册http://www.docin.com/p-57589811.html
+%http://www.docin.com/p-1227477687.html?docfrom=rrela
+%字体设置参考http://blog.csdn.net/archielau/article/details/7960229
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+%段落设置 需要在每个独立的文件中包含的
+\newcommand{\mylineskip}{\setlength{\baselineskip}{20pt}} %行间距20磅
 
-\CTEXsetup[format={\huge\bf\centering\color{cyan}}]{chapter}
-\CTEXsetup[format={\Large\bf\flushleft\color{blue}}]{section}
-\CTEXsetup[format={\large\bf\flushleft\color{olive}}]{subsection}
+%LaTeX技巧459：LaTeX中常见段落格式的设定-字间距，行间距，段间距，缩进 http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html
+%段间距设置段前后都是0磅 
+\setlength{\parskip}{0pt}
+%首行缩进两字符
+\CTEXindent
+
+%标题设置
+%ctexset 用法参见：http://www.docin.com/p-759953748.html
+%一级标题居中排列，字体为黑体，字号为三号，行距为固定值20磅，段落间距为段前24磅，段后18磅
+\CTEXsetup[beforeskip={24pt}, afterskip={18pt}, format={\huge\heiti\zihao{3}\centering\color{cyan}}]{chapter} %一级标题黑体三号
+
+%二级标题不缩进，字体为宋体加粗，字号为小三号，行距为固定值20磅，段落间距为段前18磅，段后12磅；
+\CTEXsetup[beforeskip={18pt},afterskip={12pt},format={\Large\bf\songti\zihao{-3}\flushleft\color{blue}}]{section}
+
+%三级标题缩进2字符，字体为宋体，字号为四号加粗，行距为固定值20磅，段落间距为段前12磅，段后6磅；
+\CTEXsetup[indent={2\ccwd},beforeskip={12pt},afterskip={6pt},format={\large\bf\songti\zihao{4}\color{olive}}]{subsection}
+
 
 \begin{document}
 	%标题
 	\maketitle
 	\thispagestyle{empty} 
-	\newpage
+	%\newpage
+	\frontmatter
 	%目录
 	\setcounter{page}{1} 
 	\pagenumbering{roman}
-	\newpage
-	\tableofcontents
-	\newpage
-	%开始第一章
-	\input{chapter1-photoshop}
 
+	\tableofcontents
+
+	\mainmatter
+	%开始第一章
+	\pagenumbering{arabic}
+	\setcounter{page}{1} 
+	\include{chapter1-photoshop}
+
+	\backmatter
 \end{document}

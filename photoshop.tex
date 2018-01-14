@@ -23,8 +23,13 @@
 %字体设置参考http://blog.csdn.net/archielau/article/details/7960229
 \setmainfont{Times New Roman}
 \setCJKmainfont{SimSun}
+
 %段落设置 需要在每个独立的文件中包含的
 \newcommand{\mylineskip}{\setlength{\baselineskip}{20pt}} %行间距20磅
+\mylineskip
+
+%全文字号小四=12.1pt
+\renewcommand{\normalsize}{\fontsize{12.1pt}{\baselineskip}\selectfont}
 
 %LaTeX技巧459：LaTeX中常见段落格式的设定-字间距，行间距，段间距，缩进 http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html
 %段间距设置段前后都是0磅 
@@ -61,6 +66,6 @@
 	\pagenumbering{arabic}
 	\setcounter{page}{1} 
 	\include{chapter1-photoshop}
-
+	\include{chapter2-webdesign}
 	\backmatter
 \end{document}

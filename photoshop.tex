@@ -1,0 +1,33 @@
+\documentclass[12pt,a4paper]{ctexbook}
+
+\usepackage{xcolor}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{ctexcap}
+
+\title{Photoshop学习笔记}
+\author{王永刚}
+\date{\today}
+
+\setCJKmainfont{KaiTi}
+
+\CTEXsetup[format={\huge\bf\centering\color{cyan}}]{chapter}
+\CTEXsetup[format={\Large\bf\flushleft\color{blue}}]{section}
+\CTEXsetup[format={\large\bf\flushleft\color{olive}}]{subsection}
+
+\begin{document}
+	%标题
+	\maketitle
+	\thispagestyle{empty} 
+	\newpage
+	%目录
+	\setcounter{page}{1} 
+	\pagenumbering{roman}
+	\newpage
+	\tableofcontents
+	\newpage
+	%开始第一章
+	\input{chapter1-photoshop}
+
+\end{document}

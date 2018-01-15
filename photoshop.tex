@@ -5,21 +5,27 @@
 \author{王永刚}
 \date{\today}
 \begin{document}
+	\frontmatter
 	%标题
 	\maketitle
 	\thispagestyle{empty} 
+	%封面
 	\includepdf[pages=-]{cover/cover.pdf}
-	\renewcommand\listfigurename{插图索引}
-	\listoffigures
-	\renewcommand\listtablename{表格索引}
-	\listoftables
-	\frontmatter
-	%目录
+	%罗马数字页
 	\setcounter{page}{1} 
 	\pagenumbering{roman}
-	\tableofcontents
-	\include{abstract}
+
+	\include{abstract}	%摘要
 	
+	\renewcommand\listfigurename{插图索引}
+	\listoffigures
+	
+	\renewcommand\listtablename{表格索引}
+	\listoftables
+
+	%目录
+	\tableofcontents
+
 	\mainmatter
 	%开始第一章
 	\pagenumbering{arabic}

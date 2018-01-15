@@ -7,7 +7,10 @@
 	%标题
 	\maketitle
 	\thispagestyle{empty} 
-	%\newpage
+	\renewcommand\listfigurename{插图索引}
+	\listoffigures
+	\renewcommand\listtablename{表格索引}
+	\listoftables
 	\frontmatter
 	%目录
 	\setcounter{page}{1} 

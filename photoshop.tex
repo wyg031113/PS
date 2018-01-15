@@ -61,9 +61,9 @@
 	%目录
 	\setcounter{page}{1} 
 	\pagenumbering{roman}
-
 	\tableofcontents
-
+	\include{abstract}
+	
 	\mainmatter
 	%开始第一章
 	\pagenumbering{arabic}
@@ -73,6 +73,8 @@
 	\backmatter
 	
 	\appendix
-	\chapter{附录}
-	\thanks{致谢}
+	\include{chapter-refs}
+	\include{chapter-appendix}
+	\include{chapter-thanks}
+	\include{chapter-author}
 \end{document}

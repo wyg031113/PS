@@ -10,6 +10,21 @@
 \usepackage{caption2}
 \usepackage{cite}
 \usepackage[colorlinks=true, linkcolor=blue]{hyperref} %目录和交叉引用超链接
+\usepackage{titletoc}
+
+%------------------目录格式设置---------------------------------
+%目录标题字体为黑体，字号为三号，居中排列，行距为固定值20磅，段落间距为段前24磅，段后18磅；目录内容中一级标题字体为黑体，字号为小四号，其余标题字体为宋体，字号为小四号。
+\titlecontents{chapter}[4em]{\addvspace{2pt}\filright\heiti\zihao{-4}}
+{\contentspush{\thecontentslabel\ }}
+{}{\titlerule*[.5pc]{$\cdot$}\contentspage}
+
+\titlecontents{section}[6em]{\filright\songti\zihao{-4}}
+{\contentspush{\thecontentslabel\ }}
+{}{\titlerule*[.5pc]{$\cdot$}\contentspage}
+
+\titlecontents{subsection}[8em]{\filright\songti\zihao{-4}}
+{\contentspush{\thecontentslabel\ }}
+{}{\titlerule*[.5pc]{$\cdot$}\contentspage}
 
 %-------------------------------浮动对象间距------------------------------------------
 %页面的顶部或底部浮体与文本之间http://bbs.ctex.org/forum.php?mod=viewthread&tid=70899

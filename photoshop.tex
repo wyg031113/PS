@@ -6,7 +6,24 @@
 \usepackage{amsmath}
 \usepackage{ctexcap}
 \usepackage{fancyhdr}
+\usepackage{caption2}
 \usepackage[ colorlinks=true, linkcolor=blue]{hyperref}
+
+%图标题设置
+\renewcommand{\captionfont}{\songti\zihao{5}} %图标题5号
+\setlength{\textfloatsep} {0pt} %设置图与下文的距离：http://bbs.ctex.org/forum.php?mod=viewthread&tid=70899
+\captionsetup{format=hang, aboveskip=0pt, belowskip=0pt}
+\setlength{\floatsep}{0pt} %图片间的距离
+%插入图片的命令
+\newcommand{\myfig}[4]{%#1标题 #2label #3宽度 #4img_path
+		\begin{figure}[!ht]
+		\begin{center}
+			\setlength{\belowcaptionskip}{10pt}
+			\includegraphics[width=#3\textwidth]{#4}
+			\caption{#1}\label{#2}
+		\end{center}
+	\end{figure}
+}
 %引用学习 http://www.latexstudio.net/archives/3297
 %http://blog.sina.com.cn/s/blog_7101508c0100tgg4.html
 %页眉面脚 参见《latex2e完全学习手册》4.4版式 页眉与页脚

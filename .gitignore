@@ -2,7 +2,7 @@
 *.aux
 *.log
 *.gz
-*.pdf
+photoshop.pdf
 *.gz
 *.toc
 *.out

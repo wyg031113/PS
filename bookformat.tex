@@ -13,7 +13,7 @@
 \usepackage{cite}
 \usepackage[colorlinks=true, linkcolor=blue]{hyperref} %目录和交叉引用超链接
 \usepackage{titletoc}
-
+\usepackage{enumitem}
 \renewcommand{\theequation}{\thechapter-\arabic{equation}} %设置公式标题格式为1-1
 %------------------目录格式设置---------------------------------
 %目录标题字体为黑体，字号为三号，居中排列，行距为固定值20磅，段落间距为段前24磅，段后18磅；目录内容中一级标题字体为黑体，字号为小四号，其余标题字体为宋体，字号为小四号。
@@ -130,3 +130,10 @@
 %三级标题缩进2字符，字体为宋体，字号为四号加粗，行距为固定值20磅，段落间距为段前12磅，段后6磅；
 \CTEXsetup[indent={2\ccwd},beforeskip={12pt},afterskip={6pt},format={\large\bf\songti\zihao{4}\color{olive}}]{subsection}
 
+%-------------------------------设置列表格式-----------------------------------------
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+
+%---------------------------------个人偏好-------------------------------------------
+\newcommand{\tab}{\ \ \ \ }
